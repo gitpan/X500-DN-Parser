@@ -1,0 +1,22 @@
+Revision history for Perl extension X500::DN.
+
+1.14  Sun May 12 13:12:11 2002
+	- Rename package from X500::DN to X500::DN::Parser, so as to
+		avoid a clash with Robert Joop's module
+	- Clean up licence and email stuff in all modules, scripts and other docs.
+
+1.13 26-May-99
+--------------
+o Ensure POD survives buggy pod2man
+o Ship Readme.txt, the output of pod2text
+o Combine old test.pl with code which reads X500DN.dat from DFA::Command
+
+1.12 19-Apr-99
+--------------
+o Patch Makefile.PL to support ActivePel's ppm.
+
+1.11 30-Mar-99
+--------------
+o Original version; created by h2xs 1.18
+
+Use h2xs to generate the skeleton for DN.pm.
