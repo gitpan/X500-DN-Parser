@@ -7,23 +7,24 @@ WriteMakefile
 	($] ge '5.005') ?
 	(
 		'AUTHOR' => 'Ron Savage (ron@savage.net.au)',
-		'ABSTRACT' => 'X500 Distinguished Name parser',
+		'ABSTRACT' => 'Parse X500 Distinguished Names',
     ) : (),
-'clean'				=>
+	clean			=>
 	{
-	'FILES'			=> 'blib/* Makefile MANIFEST X500-DN-Parser-*'
+		FILES		=> 'blib/* Makefile MANIFEST X500-DN-Parser-*'
 	},
-'dist'				=>
+	dist			=>
 	{
-	'COMPRESS'		=> 'gzip',
-	'SUFFIX'		=> 'gz',
+		COMPRESS	=> 'gzip',
+		SUFFIX		=> 'gz',
 	},
-'DISTNAME'			=> 'X500-DN-Parser',
-'NAME'				=> 'X500::DN::Parser',
-'PM'				=>
+	DISTNAME		=> 'X500-DN-Parser',
+	NAME			=> 'X500::DN::Parser',
+	PL_FILES		=> {},
+	PREREQ_PM		=>
 	{
-	'Parser.pm' 	=> '$(INST_LIBDIR)/Parser.pm',
+		Test::More	=> 0,
+		Test::Pod	=> 0,
 	},
-'PREREQ_PM'			=> {},
-'VERSION_FROM'		=> 'Parser.pm',
+	VERSION_FROM	=> 'lib/X500/DN/Parser.pm',
 );

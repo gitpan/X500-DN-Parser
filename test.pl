@@ -17,7 +17,7 @@ sub checkDN
 
 	my($dn, $genericDN, %RDN) = $parser -> parse($testDN, @RDN);
 
-	&printDN($testDN, $dn, $genericDN, %RDN);
+	printDN($testDN, $dn, $genericDN, %RDN);
 
 }	# End of checkDN.
 
@@ -80,7 +80,7 @@ sub printDN
 
 my($parser) = new X500::DN::Parser(\&errorInDN);
 
-my($fileName) = shift || 'X500DN.dat';
+my($fileName) = shift || 't/X500DN.dat';
 
 print "Reading $fileName \n\n";
 
@@ -95,6 +95,5 @@ while (defined($_ = <INX>) )
 	my($dn, $genericDN, %RDN) =
 		$parser -> parse($_, 'c', '[o]', '[ou]', '[cn]');
 
-	&printDN($_, $dn, $genericDN, %RDN);
-
+	printDN($_, $dn, $genericDN, %RDN);
 }

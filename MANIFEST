@@ -1,9 +1,12 @@
+Build.PL
 Changes.txt
+lib/X500/DN/Parser.pm
 Makefile.PL
-Parser.pm
-test.pl
-X500DN.dat
-Parser.html
-MANIFEST
+MANIFEST			This list of files
+MANIFEST.SKIP
+META.yml
 README
 t/base.t
+t/pod.t
+t/X500DN.dat
+test.pl

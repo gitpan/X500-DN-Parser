@@ -1,5 +1,10 @@
 Revision history for Perl extension X500::DN.
 
+1.16  Tue Jul 20 20:43:00 2004
+	- Change Makefile.PL to coexist with Module::Build
+	- Move X500DN.dat into t/
+	- Add t/pod.t to test all PODs
+
 1.15  Sun Mar 23 11:29:00 2003
 	- No source code changes in this version
 	- Patch to stop shipping blib/ directory in Unix distros, because the
