@@ -1,5 +1,12 @@
 Revision history for Perl extension X500::DN.
 
+1.15  Sun Mar 23 11:29:00 2003
+	- No source code changes in this version
+	- Patch to stop shipping blib/ directory in Unix distros, because the
+		PAUSE indexer takes this directory to indicate a binary distro,
+		which means it does not index the module, and this in turn means
+		the module is not listed in the CPAN daily update list, etc.
+
 1.14  Sun May 12 13:12:11 2002
 	- Rename package from X500::DN to X500::DN::Parser, so as to
 		avoid a clash with Robert Joop's module

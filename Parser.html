@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>C&lt;X500::DN::Parser&gt; - Parse X500 Distinguished Names</title>
+<link rev="made" href="mailto:" />
+</head>
+
+<body style="background-color: white">
+
+<p><a name="__index__"></a></p>
+<!-- INDEX BEGIN -->
+
+<ul>
+
+	<li><a href="#name">NAME</a></li>
+	<li><a href="#synopsis">SYNOPSIS</a></li>
+	<li><a href="#description">DESCRIPTION</a></li>
+	<li><a href="#parse()"><code>parse()</code></a></li>
+	<li><a href="#installation">INSTALLATION</a></li>
+	<li><a href="#author">AUTHOR</a></li>
+	<li><a href="#licence">LICENCE</a></li>
+</ul>
+<!-- INDEX END -->
+
+<hr />
+<p>
+</p>
+<h1><a name="name">NAME</a></h1>
+<p><code>X500::DN::Parser</code> - Parse X500 Distinguished Names</p>
+<p>
+</p>
+<hr />
+<h1><a name="synopsis">SYNOPSIS</a></h1>
+<pre>
+        use X500::DN::Parser;</pre>
+<pre>
+        my($parser) = new X500::DN::Parser(\&amp;errorInDN);</pre>
+<pre>
+        my($dn, $genericDN, %RDN) =
+                $parser -&gt; parse('c=au;o=MagicWare;cn=Ron Savage',
+                                'c', '[l]', 'o', '[ou]', 'cn');</pre>
+<p>
+</p>
+<hr />
+<h1><a name="description">DESCRIPTION</a></h1>
+<p>Parse DNs where the caller knows the number of RDNs.</p>
+<p>
+</p>
+<hr />
+<h1><a name="parse()"><code>parse()</code></a></h1>
+<p>Input Parameters:</p>
+<ul>
+<li></li>
+DN to be parsed
+<p></p>
+<li></li>
+A list of the expected components of the DN.
+Any component can be put in [] to indicate that that component is optional
+<p></p></ul>
+<p>Output List:</p>
+<ul>
+<li></li>
+$dn: The DN passed in
+<p></p>
+<li></li>
+$genericDN:	A generic DN matching the given DN
+<p></p>
+<li></li>
+%component:	The components of the DN and their values. Eg:
+<pre>
+        If $dn = 'c=au;o=MagicWare', then these key/values appear:
+        'c' =&gt; 'au',
+        'o' =&gt; 'MagicWare'</pre>
+<p></p></ul>
+<p>
+</p>
+<hr />
+<h1><a name="installation">INSTALLATION</a></h1>
+<p>You install <code>X500::DN::Parser</code>, as you would install any perl module library,
+by running these commands:</p>
+<pre>
+        perl Makefile.PL
+        make
+        make test
+        make install</pre>
+<p>If you want to install a private copy of <code>X500::DN::Parser</code> in your home
+directory, then you should try to produce the initial Makefile with
+something like this command:</p>
+<pre>
+        perl Makefile.PL LIB=~/perl
+                or
+        perl Makefile.PL LIB=C:/Perl/Site/Lib</pre>
+<p>If, like me, you don't have permission to write man pages into unix system
+directories, use:</p>
+<pre>
+        make pure_install</pre>
+<p>instead of make install. This option is secreted in the middle of p 414 of the
+second edition of the dromedary book.</p>
+<p>
+</p>
+<hr />
+<h1><a name="author">AUTHOR</a></h1>
+<p><code>X500::DN::Parser</code> was written by Ron Savage <em>&lt;<a href="mailto:ron@savage.net.au">ron@savage.net.au</a>&gt;</em> in 1999.</p>
+<p>
+</p>
+<hr />
+<h1><a name="licence">LICENCE</a></h1>
+<p>Australian copyright (c) 1999-2002 Ron Savage.</p>
+<pre>
+        All Programs of mine are 'OSI Certified Open Source Software';
+        you can redistribute them and/or modify them under the terms of
+        The Artistic License, a copy of which is available at:
+        <a href="http://www.opensource.org/licenses/index.html">http://www.opensource.org/licenses/index.html</a></pre>
+
+</body>
+
+</html>
