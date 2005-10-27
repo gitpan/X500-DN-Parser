@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name: X500-DN-Parser
-version: 1.16
+version: 1.17
 author:
   - Ron Savage <ron@savage.net.au>
 abstract: Parse X500 Distinguished Names
@@ -8,5 +8,8 @@ license: artistic
 build_requires:
   Test::More: 0
   Test::Pod: 0
-provides: {}
-generated_by: Module::Build version 0.24
+provides:
+  X500::DN::Parser:
+    file: lib/X500/DN/Parser.pm
+    version: 1.17
+generated_by: Module::Build version 0.2611
