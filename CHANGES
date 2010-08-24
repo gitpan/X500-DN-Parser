@@ -1,6 +1,14 @@
-Revision history for Perl extension X500::DN.
+Revision history for Perl extension X500::DN::Parser.
 
-1.05  Thu Oct 27 19:40:00 2005
+1.19  Wed Feb 10 14:02:26 2010
+	- MANIFEST.SKIP updated to exclude MYMETA.yml. Add MYMETA.yml.
+
+1.18  Fri Nov 13 13:20:00 2009
+	- Run dos2unix
+	- Rename Changes.txt to CHANGES
+	- Update MANIFEST.
+
+1.17  Thu Oct 27 19:40:00 2005
 	- Regenerate META.yml with Module::Build V 0.2611 to correct a faulty
 		META.yml output by V 0.24 which falsely said 'provides: {}',
 		which in turn stopped the PAUSE indexer from finding the module file,

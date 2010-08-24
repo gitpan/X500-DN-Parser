@@ -22,7 +22,7 @@ package X500::DN::Parser;
 #	http://www.opensource.org/licenses/index.html
 
 use strict;
-use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
+use vars qw(@ISA @EXPORT @EXPORT_OK);
 
 require Exporter;
 
@@ -36,7 +36,7 @@ require Exporter;
 
 @EXPORT_OK	= qw();
 
-$VERSION	= '1.17';
+our $VERSION = '1.19';
 
 # Preloaded methods go here.
 # -------------------------------------------------------------------
